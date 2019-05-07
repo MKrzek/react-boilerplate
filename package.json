@@ -11,6 +11,11 @@
     "format": "pretty-quick",
     "lint": "eslint ./"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
+    }
+  },
   "author": "",
   "license": "ISC",
   "repository": {
@@ -40,6 +45,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.2.0",
     "jest": "^24.7.1",
     "jest-dom": "^3.1.4",
     "prettier": "^1.17.0",
